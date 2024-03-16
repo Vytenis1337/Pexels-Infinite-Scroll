@@ -4,7 +4,14 @@
   max-width: 300px;
   height: 225px;
   margin: 20px;
-  border-radius: 5px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.fav-image-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .fav-image-card::before {
