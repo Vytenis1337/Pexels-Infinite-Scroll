@@ -55,6 +55,24 @@ cd Vinted-Infinite-Scroll
 
 npm install
 
+## Setting up Your API Key
+
+To run this application locally, you'll need to obtain an API key from Pexels. Follow the steps below to set up your API key:
+
+Obtain an API Key:
+
+&centerdot; Visit Pexels Developers and sign up for an API key if you haven't already.
+
+Configure Environment Variables:
+
+&centerdot; In the root directory of this project, create a file named .env.
+
+&centerdot; Add the following line to the .env file, replacing your_api_key_here with your actual Pexels API key:
+
+REACT_APP_PEXELS_API_KEY=your_api_key_here
+
+&centerdot; This application is configured to automatically use this environment variable for API requests to Pexels.
+
 ## Usage
 
 In this application, users can navigate through a gallery of images fetched from the Pexels API. Hovering over the images will display the title, photographer, and an option to favorite or unfavorite an image (the latter option is available if the image is already marked as a favorite, and vice versa).
