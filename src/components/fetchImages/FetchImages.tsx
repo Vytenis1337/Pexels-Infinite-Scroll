@@ -42,9 +42,9 @@ const FetchImages: React.FC = () => {
     <div className="photos-container">
       <div className="content">{results.map(renderImageCard)}</div>
       {isLoading && (
-        <p className="center">
+        <div>
           <Loading />
-        </p>
+        </div>
       )}
     </div>
   );
