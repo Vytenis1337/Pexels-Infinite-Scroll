@@ -51,7 +51,7 @@
   color: white;
 }
 
-.fav-favorite-button {
+.fav-button {
   background: transparent;
   border-radius: 5px;
   border: 1px solid white;
@@ -60,7 +60,7 @@
   cursor: pointer;
 }
 
-.fav-favorite-button:hover {
+.fav-button:hover {
   opacity: 0.7;
   background-color: white;
   color: black;
@@ -79,7 +79,7 @@
     margin: 15px;
   }
 
-  .fav-favorite-button {
+  .fav-button {
     padding: 8px;
   }
 }
@@ -93,7 +93,7 @@
     margin: 10px;
   }
 
-  .fav-favorite-button {
+  .fav-button {
     padding: 6px;
   }
 }

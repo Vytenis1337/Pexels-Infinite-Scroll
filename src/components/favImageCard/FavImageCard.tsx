@@ -17,7 +17,7 @@ const FavoriteImageCard = ({
       <div className="fav-image-container">
         <img src={image.src.large} alt={image.alt} loading="lazy" />
         <div className="fav-info">
-          <button className="fav-favorite-button" onClick={toggleFavorite}>
+          <button className="fav-button" onClick={toggleFavorite}>
             {isFavorite ? "Unfavorite" : "Favorite"}
           </button>
         </div>

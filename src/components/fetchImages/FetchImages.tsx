@@ -5,6 +5,7 @@ import "./FetchImages.css";
 
 import useInfiniteScroll from "../../hooks/useInfiniteScroll";
 import { useFavoritesContext } from "../../context/FavoritesContext";
+import { Loading } from "../loading/Loading";
 
 const FetchImages: React.FC = () => {
   const [pageNum, setPageNum] = useState<number>(1);
@@ -30,7 +31,11 @@ const FetchImages: React.FC = () => {
   return (
     <div className="photos-container">
       <div className="content">{results.map(renderImageCard)}</div>
-      {isLoading && <p className="center">Loading More Posts...</p>}
+      {isLoading && (
+        <p className="center">
+          <Loading />
+        </p>
+      )}
     </div>
   );
 };
