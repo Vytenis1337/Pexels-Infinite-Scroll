@@ -1,5 +1,3 @@
-// Saves the list of favorite images to localStorage.
-//  This allows favorite images to persist across browser sessions.
 import { Image } from "../components/imageCard/ImageCard";
 
 export const saveFavoritesToLocalStorage = (favorites: Image[]): void => {

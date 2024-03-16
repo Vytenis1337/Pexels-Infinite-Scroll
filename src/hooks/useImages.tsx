@@ -1,9 +1,5 @@
 // useImages custom hook: Manages fetching images from the Pexels API.
 // It handles loading state, errors, pagination, and ensures that images are not fetched more than once.
-// Parameters:
-// pageNum: Current page number for pagination.
-// Returns:
-// An object containing states and functions related to image fetching.
 
 import { useState, useEffect, useRef } from "react";
 import { getImagesPage } from "../utils/getImagesPage";
