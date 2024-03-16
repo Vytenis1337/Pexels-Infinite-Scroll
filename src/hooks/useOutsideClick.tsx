@@ -15,8 +15,7 @@ function assertIsNode(e: EventTarget | null): asserts e is Node {
 
 /**
  * Custom React hook to detect and respond to clicks outside a specified element.
- * @param closeModal A callback function that closes the modal.
- * @param ref A React ref object pointing to the element to detect outside clicks for.
+ 
  */
 export const useOutsideClick = (
   closeModal: () => void,

@@ -6,8 +6,8 @@ import { useRef, useCallback } from "react";
  * and then triggers loading more content.
  */
 const useInfiniteScroll = (
-  isLoading: boolean, // indicating whether data is currently being loaded.
-  hasNextPage: boolean, //  indicating if there are more pages of data to load.
+  isLoading: boolean,
+  hasNextPage: boolean,
   setPageNum: (updateFn: (prevPageNum: number) => number) => void
 ): ((node: Element | null) => void) => {
   // Ref to hold the IntersectionObserver instance.
