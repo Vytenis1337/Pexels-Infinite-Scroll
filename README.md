@@ -75,9 +75,9 @@ Components:
 
 &centerdot; 'ImageCard': A presentation component that displays individual images. It incorporates lazy loading via the useLazyLoad hook to improve performance and user experience. The card shows image details on hover and provides a button for toggling the image's favorite status, leveraging the useFavorites context.
 
-&centerdot;: 'FavSection': displays a button that triggers the modal.
+&centerdot; 'FavSection': displays a button that triggers the modal.
 
-&centerdot;: 'FavModal': contains the favorited images. Users can review and manage their favorites within this modal.
+&centerdot; 'FavModal': contains the favorited images. Users can review and manage their favorites within this modal.
 
 &centerdot; 'ScrollTopButton': Appears when the user scrolls down the page and allows for a smooth scroll back to the top. This component enhances navigation and accessibility within the application.
 
