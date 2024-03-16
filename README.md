@@ -66,24 +66,37 @@ As users scroll down and the window.scrollY value exceeds 300, a button becomes 
 ## Architecture
 
 Components:
+
 &centerdot; 'App': This is the root component where the application's main structure is defined.
+
 &centerdot; 'MainPage': This is the main page of application. It serves as the container for the FetchImages component, encapsulating the gallery's core functionality within a dedicated layout.
+
 &centerdot; 'FetchImages': Responsible for fetching and rendering the gallery images. It utilizes the custom useImages hook to retrieve image data from the Pexels API and manages pagination through infinite scrolling implemented by the useInfiniteScroll hook. It also interacts with the useFavorites context to allow users to favorite or unfavorite images.
+
 &centerdot; 'ImageCard': A presentation component that displays individual images. It incorporates lazy loading via the useLazyLoad hook to improve performance and user experience. The card shows image details on hover and provides a button for toggling the image's favorite status, leveraging the useFavorites context.
+
 &centerdot;: 'FavSection': displays a button that triggers the modal.
+
 &centerdot;: 'FavModal': contains the favorited images. Users can review and manage their favorites within this modal.
+
 &centerdot; 'ScrollTopButton': Appears when the user scrolls down the page and allows for a smooth scroll back to the top. This component enhances navigation and accessibility within the application.
 
 Custom Hooks:
+
 &centerdot; 'useImages': Fetches images from the Pexels API and manages loading state, errors, and pagination. It uses a combination of useState, useEffect, and useRef to handle the asynchronous API requests efficiently.
+
 &centerdot; 'useInfiniteScroll': Implements infinite scrolling functionality by using an IntersectionObserver to load more images as the user scrolls down.
+
 &centerdot; 'useLazyLoad': Optimizes image loading by deferring the loading of off-screen images until they are about to enter the viewport. It uses IntersectionObserver for performance-friendly lazy loading.
 
 Context Management:
+
 &centerdot; 'FavoritesContext and useFavoritesContext:': Manages the favorite images within the application, allowing users to add or remove images from their favorites list. This context provides a global state that can be accessed by various components.
 
 Utility Functions and Helpers:
+
 &centerdot; 'localStorage Helper Functions': Include functions for persisting the favorite images to localStorage, ensuring that user preferences are saved across sessions.
+
 &centerdot; 'getPostPage Function': A utility function to abstract the API call logic, making it reusable and maintaining cleaner component code.
 
 ## API Documentation
