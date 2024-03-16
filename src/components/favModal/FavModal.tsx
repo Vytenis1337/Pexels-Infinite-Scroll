@@ -11,12 +11,15 @@ interface FavoritesModalProps {
   onClose: () => void;
 }
 
+// Component definition for the FavoritesModal. It displays the favorite images in a modal.
 const FavoritesModal = ({ onClose }: FavoritesModalProps) => {
   const { favorites, addFavorite, removeFavorite, isFavorite } =
     useFavoritesContext();
 
+  // useRef hook to create a reference for the modal element. This is used by the useOutsideClick hook.
   const modalRef = useRef(null);
 
+  // Custom hook calls to enable closing the modal by either clicking outside of it or pressing the Escape key.
   useOutsideClick(onClose, modalRef);
   useEscapeKey(onClose);
   return (

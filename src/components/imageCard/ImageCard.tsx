@@ -25,16 +25,19 @@ export interface Image {
   width: number;
 }
 
+// Props for the ImageCard component.
 interface Props {
   image: Image;
   isFavorite: boolean;
   toggleFavorite: () => void;
 }
 
+// The ImageCard component, designed to display an individual image along with some information and a favorite button.
+// Uses React.forwardRef to forward a ref to the root div.
 const ImageCard = React.forwardRef<HTMLDivElement, Props>(
   ({ image, isFavorite, toggleFavorite }, ref) => {
-    const imgRef = useRef<HTMLImageElement | null>(null);
-    const src = useLazyLoad(imgRef, image.src.small);
+    const imgRef = useRef<HTMLImageElement | null>(null); // Ref for the img element to enable lazy loading.
+    const src = useLazyLoad(imgRef, image.src.small); // Utilizes the useLazyLoad hook for lazy loading image.
 
     return (
       <div className="image-card" ref={ref}>

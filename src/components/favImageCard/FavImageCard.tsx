@@ -7,6 +7,7 @@ interface FavoriteImageCardProps {
   toggleFavorite: () => void;
 }
 
+// Functional component for displaying a single image card within the favorites modal.
 const FavoriteImageCard = ({
   image,
   isFavorite,

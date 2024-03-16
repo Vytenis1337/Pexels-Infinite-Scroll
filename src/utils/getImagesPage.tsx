@@ -1,4 +1,4 @@
-export const getPostsPage = async (pageParam = 1, options = {}) => {
+export const getImagesPage = async (pageParam = 1, options = {}) => {
   try {
     const headers = {
       Authorization: process.env.REACT_APP_PEXELS_API_KEY,
