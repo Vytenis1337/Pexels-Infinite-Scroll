@@ -1,0 +1,24 @@
+.fav-button {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: transparent;
+  border: 2px solid #a28089;
+  border-radius: 20px;
+  color: #ffa8b6;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.fav-button:hover {
+  opacity: 0.7;
+  background-color: white;
+}
+
+.fav-button-hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}

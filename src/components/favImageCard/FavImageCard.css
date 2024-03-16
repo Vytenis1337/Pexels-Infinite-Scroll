@@ -1,0 +1,99 @@
+.fav-image-card {
+  position: relative;
+  overflow: hidden;
+  max-width: 300px;
+  height: 225px;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.fav-image-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+  z-index: 1;
+}
+
+.fav-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.fav-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.fav-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+
+  color: white;
+}
+
+.fav-favorite-button {
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.fav-favorite-button:hover {
+  opacity: 0.7;
+  background-color: white;
+  color: black;
+}
+.fav-image-card:hover::before {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.fav-image-card:hover .fav-info {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .fav-image-card {
+    margin: 15px;
+  }
+
+  .fav-favorite-button {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .fav-image-card {
+    margin: 10px;
+  }
+
+  .fav-favorite-button {
+    padding: 6px;
+  }
+}
