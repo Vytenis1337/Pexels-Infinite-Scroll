@@ -1,10 +1,3 @@
-// getPostsPage function: Fetches a page of images from the Pexels API.
-// Parameters:
-// pageParam: The page number to fetch.
-// options: Fetch options, including the AbortController signal for cancellation.
-// Returns:
-// A promise that resolves to an array of image data.
-
 export const getImagesPage = async (pageParam = 1, options = {}) => {
   try {
     const headers = {

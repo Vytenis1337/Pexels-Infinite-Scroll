@@ -3,7 +3,6 @@ import FavModal from "../favModal/FavModal";
 import "./FavSection.css";
 import { useFavoritesContext } from "../../context/FavoritesContext";
 
-// Defines a functional component for the favorites section.
 const FavSection = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const { favorites } = useFavoritesContext();
@@ -18,6 +17,7 @@ const FavSection = () => {
             isModalOpen ? "fav-section-button-hidden" : ""
           }`}
           onClick={toggleModal}
+          data-testid="fav-section"
         >
           Favorites
         </button>

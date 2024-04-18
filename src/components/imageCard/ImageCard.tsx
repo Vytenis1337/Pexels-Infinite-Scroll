@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import useLazyLoad from "../../hooks/useLazyLoad";
+import useLazyLoad from "../../hooks/useLazyLoad/useLazyLoad";
 import "./ImageCard.css";
 
 export interface Image {
@@ -25,22 +25,20 @@ export interface Image {
   width: number;
 }
 
-// Props for the ImageCard component.
 interface Props {
   image: Image;
   isFavorite: boolean;
   toggleFavorite: () => void;
+  testId: any;
 }
 
-// The ImageCard component, designed to display an individual image along with some information and a favorite button.
-// Uses React.forwardRef to forward a ref to the root div.
 const ImageCard = React.forwardRef<HTMLDivElement, Props>(
-  ({ image, isFavorite, toggleFavorite }, ref) => {
-    const imgRef = useRef<HTMLImageElement | null>(null); // Ref for the img element to enable lazy loading.
-    const src = useLazyLoad(imgRef, image.src.small); // Utilizes the useLazyLoad hook for lazy loading image.
+  ({ image, isFavorite, toggleFavorite, testId }, ref) => {
+    const imgRef = useRef<HTMLImageElement | null>(null);
+    const src = useLazyLoad(imgRef, image.src.small);
 
     return (
-      <div className="image-card" ref={ref}>
+      <div className="image-card" ref={ref} data-testid={testId}>
         <div className="image-container">
           <img
             ref={imgRef}

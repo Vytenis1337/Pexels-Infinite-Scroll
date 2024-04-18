@@ -5,7 +5,7 @@ import "./MainPage.css";
 
 const MainPage = () => {
   return (
-    <div className="container">
+    <div className="container" data-testid="main-page-container">
       <FavSection />
       <FetchImages />
       <ScrollTopButton />
