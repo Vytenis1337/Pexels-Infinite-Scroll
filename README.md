@@ -47,7 +47,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Clone repository
 
-git clone https://github.com/Vytenis1337/Vinted-Infinite-Scroll.git
+git clone https://github.com/Vytenis1337/Pexels-Infinite-Scroll.git
 
 cd Vinted-Infinite-Scroll
 
