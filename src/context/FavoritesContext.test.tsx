@@ -136,6 +136,5 @@ describe("useFavoritesContext", () => {
 });
 
 function MockComponentWithoutProvider() {
-  const context = useFavoritesContext();
   return <div />;
 }
